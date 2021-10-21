@@ -1,4 +1,4 @@
-# MSRPC-To-ATT&CK-Mapping
+# MSRPC-To-ATT&CK
 A repository that maps commonly used MSRPC protocols to Mitre ATT&CK while providing context around potential indicators of activity, prevention opportunities, and related RPC information. 
 
 ## List of MSRPC Protcols: 
