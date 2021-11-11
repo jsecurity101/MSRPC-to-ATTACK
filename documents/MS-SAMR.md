@@ -9,7 +9,7 @@
 
 ## Endpoint:
 * ncacn_ip_tcp
-* ncacn_np: `\PIPE\samr` alias `\pipe\lsass`
+* ncacn_np: `\PIPE\lsass` alias `\pipe\samr`
 
 ## ATT&CK Relation:
 * [T1136.002 - Domain Account](https://attack.mitre.org/techniques/T1136/002/)
@@ -18,7 +18,7 @@
 
 ## Indicator of Activity (IOA):
 * Network: 
-  * Network traffic over \pipe\samr
+  * Network traffic over `\pipe\samr` or `\pipe\lsass`
   * Destination port: 445
   * Methods: 
     * `SamrOpenDomain`

@@ -9,7 +9,7 @@
 
 ## Endpoint:
 * ncacn_ip_tcp
-* ncacn_np: `\PIPE\netlogon` alias `\pipe\lsass`
+* ncacn_np: `\PIPE\lsass` alias `\pipe\netlogon`
 
 ## ATT&CK Relation:
 * Netlogon Elevation of Privilege Vulnerability (Zerologon)
@@ -18,7 +18,7 @@
 
 ## Indicator of Activity (IOA):
 * Network: 
-  * Method (either over TCP or named pipe - netlogon): 
+  * Method (either over TCP or named pipe - `lsass`/`netlogon`): 
     *  NetrServerAuthenticate2/3 (high volume)
     *  NetrServerPasswordSet2
     *  NetrServerReqChallenge (high volume)

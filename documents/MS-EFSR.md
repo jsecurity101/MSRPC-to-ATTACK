@@ -6,11 +6,11 @@
 * `df1941c5-fe89-4e79-bf10-463657acf44d`
 
 ## Server Binary: 
-* `efslsaext.dll` (loads into) `lsass.exe `(unauthenticated implementation)
+* `efslsaext.dll` (loads into) `lsass.exe`(unauthenticated implementation)
 * `efssvc.dll` (loads into) `lsass.exe`
 
 ## Endpoint:
-* ncacn_np: `\PIPE\lsarpc` alias `\pipe\lsass` (unauthenticated implementation)
+* ncacn_np: `\PIPE\lsass` alias `\pipe\lsarpc` (unauthenticated implementation)
 * ncacn_np: `\pipe\efsrpc`
 
 ## ATT&CK Relation:
@@ -22,7 +22,7 @@
 ## Indicator of Activity (IOA):
 * Network: 
   * Inbound network connection over port 445
-  * Connection over pipe `lsarpc` or `lsass` (lsass is alias)
+  * Connection over pipe `lsarpc` or `lsass` (`lsarpc` is points to lsass)
   * Connection over pipe `efsrpc`
 
   * Methods: 

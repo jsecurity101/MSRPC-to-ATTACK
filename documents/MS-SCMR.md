@@ -9,7 +9,7 @@
 
 ## Endpoint:
 * ncacn_ip_tcp
-* ncacn_np: `\PIPE\svcctl` alias `\PIPE\ntsvcs`
+* ncacn_np: `\PIPE\ntsvcs` alias `\PIPE\svcctl`
   
 
 ## ATT&CK Relation:

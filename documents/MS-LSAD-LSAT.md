@@ -12,7 +12,7 @@ This document will hold information for both protocols: MS-LSAD & MS-LSAT. MS-LS
 
 ## Endpoint:
 * ncacn_ip_tcp
-* ncacn_np: `\PIPE\lsarpc` alias `\pipe\lsass`
+* ncacn_np: `\PIPE\lsass` alias `\pipe\lsarpc`
 
 ## ATT&CK Relation:
 * [T1087 - Account Discovery](https://attack.mitre.org/techniques/T1087/)
@@ -20,7 +20,7 @@ This document will hold information for both protocols: MS-LSAD & MS-LSAT. MS-LS
 
 ## Indicator of Activity (IOA):
 * Network: 
-    * Network traffic over: `\pipe\lsarpc`
+    * Network traffic over: `\pipe\lsarpc` or `\pipe\lsass`
     * Destination port: `445`
   * Methods: 
     * `LsarOpenPolicy*`
