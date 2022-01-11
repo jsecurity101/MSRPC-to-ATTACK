@@ -27,17 +27,18 @@ This document will hold information for both protocols: MS-RPRN & MS-PAR due to 
 ## Indicator of Activity (IOA):
 * Print Nightmare:
   * Network:  
-    * Methods:
-      * MS-PAR / `RpcAsyncAddPrinterDriver()`
-      * MS-RPRN / `RpcAddPrinterDriverEx()`
+  * Methods:
+    * MS-PAR / `RpcAsyncAddPrinterDriver()`
+    * MS-RPRN / `RpcAddPrinterDriverEx()`
 
-  * Host: 
-    * Transfers/Loads a driver: `C:\Windows\System32\spool\drivers\x64\3`.
-    * Queries: `HKLM\Software\Policies\Microsoft\Windows NT\Printers` & `HKLM\System\CurrentControlSet\Control\Print\Environments\Windows x64\Drivers\Version-3\Microsoft enhanced Point and Print compatibility driver\*`.
-      * Set SACL on registry key within test environment and there didn't seem to be a lot of noise. 
-    * 5156 - Inbound connection to spoolsv.exe over (pipe or tcp) from weird machines.
-    * spoolsv.exe creates a process (specifically a shell process).
-    * Registry key created: `HKLM\System\CurrentControlSet\Control\Print\Environments\Windows x64\Drivers\Version-3\` (if x64) `HKLM\SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86` for (x86).
+* Host: 
+  * File created: `C:\Windows\System32\spool\drivers\(x64/W32X86)\*\*.dll`
+  * Transfers/Loads a driver: `C:\Windows\System32\spool\drivers\(x64/W32X86)\*\*.dll`
+  * Queries: `HKLM\Software\Policies\Microsoft\Windows NT\Printers` & `HKLM\System\CurrentControlSet\Control\Print\Environments\Windows x64\Drivers\Version-3\Microsoft enhanced Point and Print compatibility driver\*` 
+    * Set SACL on registry key within test environment and there didn't seem to be a lot of noise. 
+  * Registry Create: `HKLM\System\CurrentControlSet\Control\Print\Environments\Windows x64\Drivers\Version-*\*.dll` (x64 bit systems) / `HKLM\SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\*.dll` (x86 bit systems)
+  * 5156 - Inbound connection to spoolsv.exe over (pipe or tcp) from weird machines
+  * `spoolsv.exe` spawns a process. 
 
 
 * “The Printer Bug” vulnerability/Spool Service:
