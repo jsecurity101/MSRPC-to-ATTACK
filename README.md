@@ -28,7 +28,8 @@ A repository that maps commonly used MSRPC protocols to Mitre ATT&CK while provi
   * [MS-EFSR.md](./documents/MS-EFSR.md)
 * [MS-NRPC: Netlogon Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/19896c1c-7e64-419b-a759-a9dc5662a780)
   * [MS-NRPC.md](./documents/MS-NRPC.md)
-
+* [MS-FSRVP: File Server Remote VSS Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fsrvp/67f0fdd9-d8bc-445d-95de-2cb6d5c4d149)
+  * [MS-FSRVP.md](./documents/MS-FSRVP.md)
 ## MITRE ATT&CK Navigator: 
 ![](./images/RPC-to-Technique-Mapping.png)
 
