@@ -88,3 +88,5 @@ Credit to [Lionel Gilles](https://twitter.com/topotam77) for introducing this at
 
 
 * https://pentestlaboratories.com/2022/01/11/shadowcoerce/
+* https://www.tiraniddo.dev/2021/08/how-windows-firewall-rpc-filter-works.html
+* https://www.thehacker.recipes/ad/movement/mitm-and-coerced-authentications/ms-fsrvp
