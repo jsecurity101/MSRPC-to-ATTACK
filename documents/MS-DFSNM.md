@@ -16,7 +16,7 @@
 
 ## Indicator of Activity (IOA):
 * Network: 
-  * Inbound network connection over port 445
+  * Inbound network connection over port 445 to the `System` Process (PID=4)
   * Connection over pipe `netdfs`
 
   * Methods: 
