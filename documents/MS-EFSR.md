@@ -15,7 +15,6 @@
 
 ## ATT&CK Relation:
 * [T1187 - Forced Authentication](https://attack.mitre.org/techniques/T1187/)
-* [T1557 - LLMNR/NBT-NS Poisoning and SMB Relay](https://attack.mitre.org/techniques/T1557/001/)
 * [PetitPotam](https://github.com/topotam/PetitPotamß)
 
 
@@ -107,7 +106,7 @@
 *  Set EFS Service Startup Type to Disabled   
 *  Apply RPC Filter
 * Certificate Mitigation: https://blog.malwarebytes.com/exploits-and-vulnerabilities/2021/07/microsoft-provides-more-mitigation-instructions-for-the-petitpotam-attack/
-*  Disable NTLM Authentication
+* Disable NTLM Authentication
 * Enable SMB signing
 *  MSFT Suggestions: https://support.microsoft.com/en-gb/topic/kb5005413-mitigating-ntlm-relay-attacks-on-active-directory-certificate-services-ad-cs-3612b773-4043-4aa9-b23d-b87910cd3429
 
