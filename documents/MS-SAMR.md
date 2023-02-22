@@ -24,7 +24,7 @@
     * `SamrOpenDomain`
     * `SamrOpenGroup`
     * `SamrLookupNames`
-    * `SamrQueryGroupInfo`
+    * `SamrQueryInformationGroup`
     * `SamrEnumerateDomainsInSamServer`
     * `SamrEnumerateGroupsInDomain`
     * `SamrEnumerateAliasesInDomain`
