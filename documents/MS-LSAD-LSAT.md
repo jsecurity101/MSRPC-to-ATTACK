@@ -26,7 +26,7 @@ This document will hold information for both protocols: MS-LSAD & MS-LSAT. MS-LS
     * `LsarOpenPolicy*`
     * `LsarLookupSid*`
     * `LsarQueryInformationPolicy*`
-    * `LsaSetInformatoinPolicy*`
+    * `LsarSetInformationPolicy*`
     * `LsarEnumerateTrustedDomains`
     * `LsarEnumeratePrivileges`
     * `LsarEnumeratePrivilegesAccount`
