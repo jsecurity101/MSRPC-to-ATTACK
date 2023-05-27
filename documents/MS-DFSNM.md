@@ -53,15 +53,15 @@
         filter
         add rule layer=um actiontype=permit
         add condition field=if_uuid matchtype=equal data=4FC742E0-4A10-11CF-8273-00AA004AE673
-        add condition field=auth_type matchtype=equal data=16
-        add condition field=auth_level matchtype=equal data=6
+        add condition field=remote_user_token matchtype=equal data=D:(A;;CC;;;DA)
         add filter
         add rule layer=um actiontype=block
         add condition field=if_uuid matchtype=equal data=4FC742E0-4A10-11CF-8273-00AA004AE673
         add filter
         quit
         ``` 
-    * This filter will only allow connections through `4FC742E0-4A10-11CF-8273-00AA004AE673` if the authentication type is `Kerberos (16)` and the authentication type is `RPC_C_AUTHN_LEVEL_PKT_PRIVACY (6)`. This is going to prevent NTLM from being used and inturn relay from being performed. 
+    * This filter will only allow Domain Admins to communicate over interface `4FC742E0-4A10-11CF-8273-00AA004AE673`.
+
 
 * Disable NTLM Authentication
 * Enable SMB signing
@@ -69,6 +69,7 @@
 
 ## Notes: 
 * The `Dfs` Service is running by default on Domain Controllers, so it might break functionality to turn this service off or disable it. 
+* If you don't want to assign DA's to this DACL, so it might be best to create a specific group to this action. Change DACL to leverage the group SID - like : D:(A;;CC;;;S-1-5-21-3637186843-3378876361-2759896766-2106).
 
 
 ## Useful Resources: 
